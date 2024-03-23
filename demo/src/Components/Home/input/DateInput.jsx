@@ -1,6 +1,7 @@
 import React from 'react'
 import '../../css/home/dateInput.css'
 
+
 const DateInput = ({label}) => { 
   return (
     <div className="form-group">

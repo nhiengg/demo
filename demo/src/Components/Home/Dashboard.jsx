@@ -5,7 +5,7 @@ import DateInput from './input/DateInput.jsx'
 import SelectInput from './input/SelectInput.jsx'
 import SearchInput from './input/SearchInput.jsx'
 import DashboardTable from '../Table/DashboardTable.jsx'
-import { FaCircle , FaUser , FaDesktop , FaAngleRight , FaSearch , FaCheckDouble } from "react-icons/fa";
+import { FaCircle , FaUser , FaDesktop , FaAngleRight , FaSearch , FaCheckDouble} from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5"; 
 import { RiShutDownLine } from "react-icons/ri"; 
 import { PiNotepad } from "react-icons/pi";
@@ -13,7 +13,7 @@ import { PiNotepad } from "react-icons/pi";
 const Dashboard = () => {
   let status = ['Tất cả','Hoàn thành hợp đồng','Đang thanh toán','Thanh toán thành công','Hủy hợp đồng','Chờ cấp đơn']
   let contract = ['Tất cả','CP_02/02/2024_11112-00000219','CP_02/02/2024_11112-00000218','CP_02/02/2024_11112-00000216','CP_02/02/2024_11112-00000212','CP_02/02/2024_11112-00000209']
-  let info = ['1','21/03/2024 09:54	','Thông báo sau','Công ty cổ phần HAPACO','3.300.000 VND','Chờ cấp đơn','18/03/2024 : 18/03/2024']
+  let info = ['1','21/03/2024 09:54	','Thông báo sau','Công ty cổ phần HAPACO','3.300.000 VND','Chờ cấp đơn','18/03/2024 : 18/03/2024','']
   return (
     <div className="vh-100">
       {/* thanh menu */}
@@ -34,7 +34,7 @@ const Dashboard = () => {
                   <a href="" className='icon ma-icon'><IoSettingsSharp /></a>
                 </li>
                 <li className="list-item ">
-                  <a href="" className='icon mb-icon'><RiShutDownLine /></a>
+                  <a href="http://localhost:3000/" className='icon mb-icon'><RiShutDownLine /></a>
                 </li>
               </ul>
             </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../css/home/tabledashboard.css'
+import { FaPencil } from "react-icons/fa6";
 
 const DashboardTable = ({tableArray}) => {
   const [arrayTable,setArrayTable] = useState([])
@@ -9,6 +10,7 @@ const DashboardTable = ({tableArray}) => {
       setArrayTable(tableArray)
     }
   },[arrayTable])
+  console.log(arrayTable);
   return (
     <div className='table-responsive'>
         <table className='table'>
@@ -25,45 +27,17 @@ const DashboardTable = ({tableArray}) => {
                 </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr className='tr-hover'>
                 {
                   arrayTable.map((item,index) => {
-                    return <th key={index} className='th-table-body'>{item}</th>
-                  })
-                }
-              </tr>
-              <tr>
-                {
-                  arrayTable.map((item,index) => {
-                    return <th key={index} className='th-table-body'>{item}</th>
-                  })
-                }
-              </tr>
-              <tr>
-                {
-                  arrayTable.map((item,index) => {
-                    return <th key={index} className='th-table-body'>{item}</th>
-                  })
-                }
-              </tr>
-              <tr>
-                {
-                  arrayTable.map((item,index) => {
-                    return <th key={index} className='th-table-body'>{item}</th>
-                  })
-                }
-              </tr>
-              <tr>
-                {
-                  arrayTable.map((item,index) => {
-                    return <th key={index} className='th-table-body'>{item}</th>
-                  })
-                }
-              </tr>
-              <tr>
-                {
-                  arrayTable.map((item,index) => {
-                    return <th key={index} className='th-table-body'>{item}</th>
+                      if (item == '') {
+                        return <th className='th-table-body'><button className='btn-action'><FaPencil /></button></th>
+                      }
+                      else {
+                        return<React.Fragment>
+                                <th key={index} className='th-table-body'>{item}</th>
+                              </React.Fragment> 
+                      }       
                   })
                 }
               </tr>

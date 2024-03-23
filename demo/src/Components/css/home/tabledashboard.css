@@ -10,6 +10,9 @@
 .table tr{
     white-space: nowrap;
 }
+.table .tr-hover:hover{
+    -webkit-box-shadow: inset 0 0 0 2000px #f1f1f1;
+}
 .table .th-table-head{
     font-weight: 500;
     color: #6c757d;
@@ -26,4 +29,14 @@
     font-size: 13px;
     font-weight: 500;
     margin-bottom: 10px;
+}
+.btn-action{
+    background-color: #1ecab8;
+    color: #fff;
+    border: 1px solid #1ecab8;
+    padding: 3px 6px ;
+    border-radius: 3px;
+}
+.btn-action:hover{
+    -webkit-box-shadow: inset 0 0 0 2000px #3daca0;
 }
